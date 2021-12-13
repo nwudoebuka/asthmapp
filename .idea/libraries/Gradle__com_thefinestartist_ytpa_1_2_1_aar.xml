@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.thefinestartist:ytpa:1.2.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f04202dad9a303e1ee7340ee673a8c7b/jetified-ytpa-1.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f04202dad9a303e1ee7340ee673a8c7b/jetified-ytpa-1.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f04202dad9a303e1ee7340ee673a8c7b/jetified-ytpa-1.2.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f04202dad9a303e1ee7340ee673a8c7b/jetified-ytpa-1.2.1/jars/libs/YouTubeAndroidPlayerApi.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.thefinestartist/ytpa/1.2.1/51162625f6ab502783a6e8b6108f6951710a6b6d/ytpa-1.2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.thefinestartist/ytpa/1.2.1/9bd518940a192d68be25736043f8d4f27e0ea234/ytpa-1.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

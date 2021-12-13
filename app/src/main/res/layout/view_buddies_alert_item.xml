@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/materialCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="4dp"
+    android:backgroundTint="@color/brightBlack"
+    app:cardCornerRadius="10dp"
+    app:strokeColor="@color/indigo"
+    app:strokeWidth="2dp">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingEnd="12dp"
+      android:paddingBottom="16dp">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvNumber"
+        app:layout_constraintEnd_toEndOf="@id/tvNumber"
+        app:layout_constraintStart_toStartOf="@id/tvNumber"
+        app:layout_constraintTop_toTopOf="@id/tvNumber"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/pulsing_circle" />
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_indigo_background"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:text="@string/sending_sms_to_buddies"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvNumber"
+        app:layout_constraintTop_toTopOf="@id/tvNumber" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootOptionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+      <androidx.constraintlayout.helper.widget.Flow
+          android:id="@+id/flowOptions"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:flow_horizontalBias="0"
+          app:flow_horizontalGap="8dp"
+          app:flow_horizontalStyle="packed"
+          app:flow_verticalStyle="packed"
+          app:flow_wrapMode="chain"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".features.SplashActivity">
+
+  <com.airbnb.lottie.LottieAnimationView
+      android:id="@+id/animationView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:lottie_autoPlay="true"
+      app:lottie_rawRes="@raw/splashscreen" />
+
+  <LinearLayout
+      android:id="@+id/ll_choose_role"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_marginEnd="12dp"
+      android:orientation="vertical"
+      android:visibility="gone"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/welcome"
+        android:textColor="@color/ebonyClay"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/please_choose_your_role"
+        android:textSize="16sp" />
+
+    <com.asthmapp.android.features.components.ButtonWithChevron
+        android:id="@+id/btnLoginAsUser"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="36dp" />
+
+    <com.asthmapp.android.features.components.ButtonWithChevron
+        android:id="@+id/btnLoginAsBuddy"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp" />
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".features.alert.AlertActivity">
+
+  <TextView
+      android:id="@+id/title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_marginTop="16dp"
+      android:text="@string/alert_mode"
+      android:textColor="@color/white"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnExit"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:layout_marginEnd="12dp"
+      android:backgroundTint="@color/black"
+      android:padding="4dp"
+      android:text="@string/exit"
+      android:textAllCaps="false"
+      android:textColor="@color/coralRed"
+      android:textSize="15sp"
+      android:visibility="gone"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:rippleColor="@color/slateGray" />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/title" />
+
+  <TextView
+      android:id="@+id/tvCount"
+      tools:text="10"
+      android:textSize="128sp"
+      android:textColor="@color/white"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/recyclerView"
+      app:layout_constraintBottom_toTopOf="@id/btnStop"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnStop"
+      style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:layout_marginVertical="12dp"
+      android:layout_marginStart="12dp"
+      android:backgroundTint="@color/coralRed"
+      android:text="@string/stop_alert_mode"
+      android:textColor="@color/white"
+      android:translationZ="2dp"
+      app:cornerRadius="10dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:strokeWidth="0dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

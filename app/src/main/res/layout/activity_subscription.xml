@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.onboarding.OnboardingStartFragment">
+
+  <ImageView
+      android:id="@+id/ivBack"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="24dp"
+      android:src="@drawable/ic_back_black"
+      app:backgroundTint="@color/black"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="@string/get_started_and_enjoy_a_30_day_free_trial"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_subscribe" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="20dp"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="3dp">
+
+      <ProgressBar
+          android:id="@+id/monthlyProgress"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:visibility="visible"
+          tools:visibility="invisible" />
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/monthlyContent"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/standard"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/tvCurrency"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="-2dp"
+              android:text="£"
+              android:textColor="@color/colorPrimary"
+              android:textSize="14sp" />
+
+          <TextView
+              android:id="@+id/tvAmount"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginStart="2dp"
+              android:text="2.99"
+              android:textColor="@color/colorPrimary"
+              android:textSize="22sp"
+              android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/llText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/per_month"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="-4dp"
+            android:layout_marginBottom="-4dp"
+            android:src="@drawable/ic_ok_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinue"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/continue_onboarding_gradient"
+        android:text="@string/continue_word"
+        android:textColor="@color/white"
+        android:translationZ="2dp"
+        app:backgroundTint="@null"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeWidth="0dp" />
+
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

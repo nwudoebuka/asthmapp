@@ -1,0 +1,85 @@
+apply plugin: 'kotlin-multiplatform'
+apply plugin: 'kotlinx-serialization'
+apply plugin: 'org.jetbrains.kotlin.native.cocoapods'
+apply plugin: 'co.touchlab.kotlinxcodesync'
+
+kotlin {
+    jvm()
+
+    sourceSets {
+        commonMain {
+            dependencies {
+                implementation "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
+                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+                implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version"
+                implementation "io.ktor:ktor-client-core:$ktor_version"
+                implementation "io.ktor:ktor-client-serialization:$ktor_version"
+                implementation "io.ktor:ktor-client-logging:$ktor_version"
+                implementation "org.jetbrains.kotlinx:kotlinx-datetime:0.1.1"
+
+                api "io.xorum:ReKamp:$reKamp_version"
+            }
+        }
+
+        commonTest {
+            dependencies {
+                implementation "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
+            }
+        }
+
+        iOSMain {
+            dependencies {
+                implementation "io.ktor:ktor-client-ios:$ktor_version"
+            }
+        }
+
+        jvmMain {
+            dependencies {
+                implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+                api "io.ktor:ktor-client-logging-jvm:$ktor_version"
+                api "io.xorum:ReKamp-jvm:$reKamp_version"
+            }
+        }
+
+        jvmTest {
+            dependencies {
+                implementation "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
+                implementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+                implementation "junit:junit:4.13.1"
+            }
+        }
+    }
+
+    targets {
+        def buildForDevice = project.findProperty("kotlin.native.cocoapods.target") == "ios_arm"
+        if (buildForDevice) {
+            iosArm64("iOS64")
+            iosArm32("iOS32")
+
+            sourceSets["iOS64Main"].dependsOn(sourceSets.iOSMain)
+            sourceSets["iOS64Main"].dependencies { api "io.xorum:ReKamp-iosArm64:$reKamp_version" }
+
+            sourceSets["iOS32Main"].dependsOn(sourceSets.iOSMain)
+            sourceSets["iOS32Main"].dependencies { api "io.xorum:ReKamp-iosArm32:$reKamp_version" }
+        } else {
+            iosX64('iosX')
+
+            sourceSets["iosXMain"].dependsOn(sourceSets.iOSMain)
+            sourceSets["iosXMain"].dependencies { api "io.xorum:ReKamp-iosX64:$reKamp_version" }
+        }
+    }
+
+    cocoapods {
+        summary = "Asthm App common module"
+        homepage = "https://github.com/mobileappconsultant/AsthmApp"
+    }
+}
+
+configurations {
+    compileClasspath
+}
+
+xcode {
+    projectPath = "../ios/Asthm App.xcodeproj"
+    target = "Asthm App"
+}

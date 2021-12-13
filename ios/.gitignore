@@ -1,0 +1,7 @@
+Asthm App.xcodeproj/xcuserdata/
+Asthm App.xcworkspace/xcuserdata/
+Asthm App.xcodeproj/xcshareddata/
+Pods/
+.idea/
+*.DS_Store
+/Codeforces Watcher/GoogleService-Info.plist 

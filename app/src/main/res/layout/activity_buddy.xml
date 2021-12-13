@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    tools:context=".features.buddy.BuddyActivity">
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/whitesmoke"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+      <TextView
+          android:id="@+id/tvPageTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:ellipsize="end"
+          android:maxLines="1"
+          android:text="@string/my_buddies"
+          android:textColor="@color/ebonyClay"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <ImageView
+          android:id="@+id/icLogout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="12dp"
+          android:src="@drawable/ic_logout"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:tint="@color/ebonyClay" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.appcompat.widget.Toolbar>
+
+  <TextView
+      style="@style/TextAppearance.Asthma.BigBody"
+      android:id="@+id/tvNoBuddies"
+      android:layout_marginTop="4dp"
+      android:layout_marginHorizontal="12dp"
+      android:textColor="@color/ebonyClay"
+      android:text="@string/no_buddies"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+  <include
+      android:id="@+id/spinner"
+      layout="@layout/spinner_with_cap"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

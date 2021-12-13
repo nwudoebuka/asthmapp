@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentConstraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+  <TextView
+      android:id="@+id/tvTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="36dp"
+      android:text="@string/verify_phone"
+      android:textAllCaps="true"
+      android:textColor="@color/ebonyClay"
+      android:textSize="18sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/tvSubtitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:gravity="center"
+      android:text="@string/please_enter_the_verification_code"
+      android:textColor="@color/ebonyClay"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+  <TextView
+      android:id="@+id/tvWatch"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:textColor="@color/colorPrimary"
+      android:textSize="24sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+      tools:text="4:32" />
+
+  <com.asthmapp.android.components.InputField
+      android:id="@+id/ifCode"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginEnd="24dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tvWatch"
+      app:layout_goneMarginTop="8dp" />
+
+  <com.asthmapp.android.features.components.ButtonWithChevron
+      android:id="@+id/btnVerify"
+      android:layout_width="match_parent"
+      android:layout_height="64dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="24dp"
+      android:text="@string/login"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/ifCode" />
+
+  <TextView
+      android:id="@+id/tvNotReceiveCode"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="64dp"
+      android:text="@string/did_not_receive_the_code"
+      android:textColor="@color/ebonyClay"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/btnVerify" />
+
+  <TextView
+      android:id="@+id/tvResend"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:enabled="false"
+      android:text="@string/resend"
+      android:textColor="@color/slateGray"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tvNotReceiveCode" />
+
+  <include
+      android:id="@+id/spinner"
+      layout="@layout/spinner_with_cap"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

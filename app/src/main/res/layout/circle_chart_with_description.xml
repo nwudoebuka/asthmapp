@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <com.github.mikephil.charting.charts.PieChart
+      android:id="@+id/chart"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="@id/textContainer"
+      app:layout_constraintEnd_toStartOf="@id/textContainer"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/textContainer"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/chart"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/tvPrevent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/ebonyClay"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circle1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Prevent inhaler (57%)" />
+
+    <ImageView
+        android:id="@+id/circle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_circle"
+        app:layout_constraintBottom_toBottomOf="@id/tvPrevent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvPrevent" />
+
+    <TextView
+        android:id="@+id/tvReliever"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/ebonyClay"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circle2"
+        app:layout_constraintTop_toBottomOf="@id/tvPrevent"
+        tools:text="Reliever inhaler (27%)" />
+
+    <ImageView
+        android:id="@+id/circle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_circle"
+        app:layout_constraintBottom_toBottomOf="@id/tvReliever"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvReliever"
+        app:tint="@color/jordyBlue" />
+
+    <TextView
+        android:id="@+id/tvCombination"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/ebonyClay"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circle3"
+        app:layout_constraintTop_toBottomOf="@id/tvReliever"
+        tools:text="Combination inhaler (16%)" />
+
+    <ImageView
+        android:id="@+id/circle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_circle"
+        app:layout_constraintBottom_toBottomOf="@id/tvCombination"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvCombination"
+        app:tint="@color/hawkesBlue" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

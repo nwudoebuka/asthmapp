@@ -1,0 +1,5 @@
+<resources>
+  <dimen name="fab_margin">16dp</dimen>
+  <dimen name="radius">4dp</dimen>
+  <dimen name="dots_height">20dp</dimen>
+</resources>

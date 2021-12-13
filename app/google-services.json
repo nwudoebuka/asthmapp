@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "166542197002",
+    "project_id": "asthmapp-99223",
+    "storage_bucket": "asthmapp-99223.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166542197002:android:c84d2da63a124cadbfbaf3",
+        "android_client_info": {
+          "package_name": "com.asthmapp.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166542197002-va8i4phl9o6nkmcjq93cdbr53jdgu82t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.asthmapp.android",
+            "certificate_hash": "d01517f16d0ee8879f997ffa27570a062cb410aa"
+          }
+        },
+        {
+          "client_id": "166542197002-nf3n54bk5u51d0us3qeijdvs3iale44c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWBRBHiJI5zCfhDicU262MaHhvXzGkBwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166542197002-nf3n54bk5u51d0us3qeijdvs3iale44c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "166542197002-rsanlpuh0k96mdpq9rjr0mmcebr04mgv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.asthmapp.ios"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

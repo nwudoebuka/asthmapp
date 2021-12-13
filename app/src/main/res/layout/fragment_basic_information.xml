@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="24dp"
+      android:src="@drawable/ic_basic_information_background"
+      app:layout_constraintBottom_toTopOf="@id/bottomSheet"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:alpha="0.3"
+      android:background="@color/black"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <FrameLayout
+      android:id="@+id/bottomSheet"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_marginBottom="-50dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:cardCornerRadius="50dp">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:paddingStart="16dp"
+          android:paddingEnd="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_grey_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:text="@string/basic_information"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/name"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="4dp"
+            android:backgroundTint="@color/white"
+            android:singleLine="true"
+            android:shadowColor="@color/white"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/tvName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvName"
+            app:layout_constraintTop_toTopOf="@id/tvName" />
+
+        <TextView
+            android:id="@+id/tvHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/height"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+        <LinearLayout
+            android:id="@+id/metricLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/tvHeight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvName"
+            app:layout_constraintTop_toTopOf="@id/tvHeight">
+
+          <EditText
+              android:id="@+id/etCentimeter"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="24dp"
+              android:layout_marginBottom="4dp"
+              android:layout_weight="1"
+              android:backgroundTint="@color/white"
+              android:singleLine="true"
+              android:textColor="@color/white"
+              android:textColorHighlight="@color/white"
+              android:textCursorDrawable="@color/white" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="8dp"
+              android:text="@string/cm"
+              android:textColor="@color/whitesmoke" />
+
+          <TextView
+              android:id="@+id/tvMetric"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="4dp"
+              android:text="@string/metric"
+              android:textColor="@color/white"
+              app:layout_constraintBottom_toBottomOf="@id/tvHeight"
+              app:layout_constraintStart_toEndOf="@id/etCentimeter"
+              app:layout_constraintTop_toTopOf="@id/tvHeight" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/imperialLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/tvHeight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvName"
+            app:layout_constraintTop_toTopOf="@id/tvHeight">
+
+          <EditText
+              android:id="@+id/etFoots"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="24dp"
+              android:layout_marginBottom="4dp"
+              android:layout_weight="1"
+              android:backgroundTint="@color/white"
+              android:singleLine="true"
+              android:textColor="@color/white"
+              android:textColorHighlight="@color/white"
+              android:textCursorDrawable="@color/white" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/ft"
+              android:textColor="@color/whitesmoke" />
+
+          <EditText
+              android:id="@+id/etInches"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:layout_marginBottom="4dp"
+              android:layout_weight="1"
+              android:backgroundTint="@color/white"
+              android:singleLine="true"
+              android:textColor="@color/white"
+              android:textColorHighlight="@color/white"
+              android:textCursorDrawable="@color/white" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="8dp"
+              android:text="@string/in"
+              android:textColor="@color/whitesmoke" />
+
+          <TextView
+              android:id="@+id/tvImperial"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="4dp"
+              android:text="@string/imperial"
+              android:textColor="@color/white"
+              app:layout_constraintBottom_toBottomOf="@id/tvHeight"
+              app:layout_constraintStart_toEndOf="@id/etCentimeter"
+              app:layout_constraintTop_toTopOf="@id/tvHeight" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_down"
+            app:layout_constraintBottom_toBottomOf="@id/tvHeight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvHeight" />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/gender"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHeight" />
+
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal"
+            android:theme="@style/MyRadioButton"
+            app:layout_constraintBottom_toBottomOf="@id/tvGender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvGender"
+            app:layout_constraintTop_toTopOf="@id/tvGender">
+
+          <RadioButton
+              android:id="@+id/rbMale"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="@string/male"
+              android:textColor="@color/white" />
+
+          <RadioButton
+              android:id="@+id/rbFemale"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="@string/female"
+              android:textColor="@color/white" />
+
+          <RadioButton
+              android:id="@+id/rbUnspecified"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="@string/unspecified"
+              android:textColor="@color/white" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvBirthDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/birth_date"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+        <EditText
+            android:id="@+id/etBirthDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="4dp"
+            android:backgroundTint="@color/white"
+            android:focusable="false"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/tvBirthDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvBirthDate"
+            app:layout_constraintTop_toTopOf="@id/tvBirthDate" />
+
+        <com.asthmapp.android.features.onboarding.DotsView
+            android:id="@+id/dotsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etBirthDate" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="72dp"
+            android:src="@drawable/ic_arrow_forward"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/colorPrimary" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+  </FrameLayout>
+
+  <include
+      android:id="@+id/spinner"
+      layout="@layout/spinner_with_cap"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:elevation="10dp"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

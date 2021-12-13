@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.airbnb.android:epoxy:4.0.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78058b8432dd474662aee5df7679a8fb/jetified-epoxy-4.0.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78058b8432dd474662aee5df7679a8fb/jetified-epoxy-4.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78058b8432dd474662aee5df7679a8fb/jetified-epoxy-4.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78058b8432dd474662aee5df7679a8fb/jetified-epoxy-4.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.airbnb.android/epoxy/4.0.0/3df21ae6bea8719c904afaf9be5d21d5e48e74aa/epoxy-4.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.airbnb.android/epoxy/4.0.0/9732e8683fed44eb2feb8fbc0a79695e3e3e2518/epoxy-4.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

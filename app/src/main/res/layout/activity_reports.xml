@@ -1,0 +1,112 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brightGray"
+    tools:context="com.asthmapp.android.features.learn.LearnFragment">
+
+  <com.google.android.material.appbar.MaterialToolbar
+      android:id="@+id/toolbar"
+      style="@style/Widget.MaterialComponents.Toolbar.Primary"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:theme="@style/MyThemeOverlay_Toolbar"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:title="@string/reports" />
+
+  <co.ceryle.segmentedbutton.SegmentedButtonGroup
+      android:id="@+id/segmentedGroup"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="48dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="48dp"
+      android:elevation="2dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar"
+      app:sbg_animateSelector="linear"
+      app:sbg_animateSelectorDuration="100"
+      app:sbg_backgroundColor="@color/white"
+      app:sbg_borderColor="@color/white"
+      app:sbg_borderSize="2dp"
+      app:sbg_dividerColor="@color/silver"
+      app:sbg_dividerPadding="10dp"
+      app:sbg_dividerRadius="10dp"
+      app:sbg_dividerSize="2dp"
+      app:sbg_radius="5dp"
+      app:sbg_selectorColor="@color/colorPrimary">
+
+    <co.ceryle.segmentedbutton.SegmentedButton
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        app:sb_drawableGravity="left"
+        app:sb_drawableTint_onSelection="@color/colorPrimary"
+        app:sb_rippleColor="@color/silver"
+        app:sb_text="@string/daily"
+        app:sb_textColor="@color/ebonyClay"
+        app:sb_textColor_onSelection="@color/white" />
+
+    <co.ceryle.segmentedbutton.SegmentedButton
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawablePadding="4dp"
+        app:sb_drawableGravity="top"
+        app:sb_drawableTint_onSelection="@color/colorPrimary"
+        app:sb_rippleColor="@color/silver"
+        app:sb_text="@string/weekly"
+        app:sb_textColor="@color/ebonyClay"
+        app:sb_textColor_onSelection="@color/white" />
+
+    <co.ceryle.segmentedbutton.SegmentedButton
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawablePadding="4dp"
+        app:sb_drawableGravity="right"
+        app:sb_drawableTint_onSelection="@color/colorPrimary"
+        app:sb_rippleColor="@color/silver"
+        app:sb_text="@string/monthly"
+        app:sb_textColor="@color/ebonyClay"
+        app:sb_textColor_onSelection="@color/white" />
+  </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:paddingBottom="12dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/segmentedGroup" />
+
+  <FrameLayout
+      android:id="@+id/cap"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:alpha="0.4"
+      android:background="@color/ebonyClay"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+  <ProgressBar
+      android:id="@+id/spinner"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:indeterminateTint="@color/colorPrimary"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
